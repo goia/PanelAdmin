@@ -1,0 +1,8 @@
+.well pre {
+    padding: 10px!important; 
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+    white-space: ppre-wrap!important;
+}
