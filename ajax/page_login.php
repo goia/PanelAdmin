@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>DevOOPS</title>
+		<title>OoO</title>
 		<meta name="description" content="description">
 		<meta name="author" content="Evgeniya">
 		<meta name="keyword" content="keywords">
@@ -19,6 +19,7 @@
 	</head>
 <body>
 <div class="container-fluid">
+ <form name="login" action="../index.php" method="post">
 	<div id="page-login" class="row">
 		<div class="col-xs-12 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 			<div class="text-right">
@@ -31,19 +32,21 @@
 					</div>
 					<div class="form-group">
 						<label class="control-label">Usuario</label>
-						<input type="text" class="form-control" name="username" />
+						<input type="text" class="form-control" name="user" />
 					</div>
 					<div class="form-group">
 						<label class="control-label">Contraseña</label>
 						<input type="password" class="form-control" name="password" />
 					</div>
 					<div class="text-center">
-						<a href="../index.html" class="btn btn-primary">Entrar</a>
+						<!--<a href="../index.html" class="btn btn-primary">Entrar</a>-->
+						<input type="submit" name="login" class="btn btn-red" value="Entrar">
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+    </form>
 </div>
 </body>
 </html>

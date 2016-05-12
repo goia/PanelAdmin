@@ -48,7 +48,7 @@
 									<i class="fa fa-angle-down pull-right"></i>
 									<div class="user-mini pull-right">
 										<span class="welcome">Bienvenido,</span>
-										<span>Usuario</span>
+										<span><?php echo $_SESSION['ses_nombre']?></span>
 									</div>
 								</a>
 								<ul class="dropdown-menu">
@@ -83,7 +83,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="./assets/cerrar.php">
 											<i class="fa fa-power-off"></i>
 											<span>Logout</span>
 										</a>

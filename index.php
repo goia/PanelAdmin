@@ -1,3 +1,23 @@
+<?php
+    @ob_start();
+    session_start();
+	include "./assets/ConfigBD/common.php";
+	// Vemos si nos estamos logeando y si es así comprobamos si existe el usuario en la base de datos
+    /*echo $_POST['user']."<br/>";
+    echo $_POST['password']."<br/>";
+    echo md5($_POST['password']);
+*/
+if (!isValidUser()){
+		header ("Location: ajax/login1/index.php?necesitas loguearte");
+	}
+
+	if (isset($_POST['user'])){
+		if (!login($_POST['user'],$_POST['password'])){
+			header ("Location: ./ajax/page_login.php?error=1"); 
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <?Php require("./assets/head.php")?>
@@ -38,6 +58,14 @@
 			<div id="about">
 				<div class="about-inner">
 					<h4 class="page-header">Informacion Util</h4>
+					<p>
+					    <?php
+                              echo $_SESSION['ses_id_usuario']."<br/>"	;
+	                           echo $_SESSION['ses_nombre']	."<br/>";
+                                echo $_SESSION['ses_login']."<br/>"	;
+                               echo $_SESSION['ses_ultimo_acceso']."<br/>"	;
+                        ?>
+					</p>
 					<p>OoO</p>
 					<p>Homepage - <a href="#" target="_blank">http://</a></p>
 					<p>Email - <a href="mailto:OoO@gmail.com">OoO@gmail.com</a></p>

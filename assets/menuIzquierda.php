@@ -1,7 +1,10 @@
 <div id="sidebar-left" class="col-xs-2 col-sm-2">
-    <ul class="nav main-menu">
+   <?php
+    if (isAdmin()){
+        ?>
+		  <ul class="nav main-menu">
         <li>
-            <a href="ajax/dashboard.html" class="ajax-link">
+            <a href="ajax/dashboard.php" class="ajax-link">
                 <i class="fa fa-dashboard"></i>
                 <span class="hidden-xs">Dashboard</span>
             </a>
@@ -17,6 +20,7 @@
                 <li><a class="ajax-link" href="ajax/pruebas.php">Páginas para pruebas</a></li>
                 <li><a class="ajax-link" href="ajax/SQL.php">SQL</a></li>
                 <li><a class="ajax-link" href="ajax/tablaSql.php">Listado SQL</a></li>
+                <li><a class="ajax-link" href="ajax/listadoClientes.php">Listado Cofis</a></li>
             </ul>
         </li>
         <li class="dropdown">
@@ -75,7 +79,7 @@
                 <span class="hidden-xs">Pages</span>
             </a>
             <ul class="dropdown-menu">
-                <li><a href="ajax/page_login.html">Login</a></li>
+                <li><a href="ajax/page_login.php">Login</a></li>
                 <li><a href="ajax/page_register.html">Register</a></li>
                 <li><a id="locked-screen" class="submenu" href="ajax/page_locked.html">Locked Screen</a></li>
                 <li><a class="ajax-link" href="ajax/page_contacts.html">Contacts</a></li>
@@ -184,4 +188,34 @@
             </ul>
         </li>
     </ul>
-</div>
+    <?php
+	}?>
+   <?php
+    if (Cofis()){
+        ?>
+		  <ul class="nav main-menu">
+        <li>
+            <a href="ajax/dashboard.html" class="ajax-link">
+                <i class="fa fa-dashboard"></i>
+                <span class="hidden-xs">Dashboard</span>
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-list"></i>
+                <span class="hidden-xs">Páginas</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="ajax-link" href="ajax/carpetas.php">Carpetas</a></li>
+                <!--<li><a class="ajax-link" href="ajax/GPSMapas.php">GPSMapas</a></li>-->
+                <li><a class="ajax-link" href="ajax/pruebas.php">Páginas para pruebas</a></li>
+                <li><a class="ajax-link" href="ajax/SQL.php">SQL</a></li>
+                <li><a class="ajax-link" href="ajax/tablaSql.php">Listado SQL</a></li>
+            </ul>
+        </li>
+
+    </ul>
+                        
+    <?php
+	}?>
+        </div>

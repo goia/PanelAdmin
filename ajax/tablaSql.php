@@ -39,7 +39,7 @@
 				<div class="no-move"></div>
 			</div>
 			<div class="box-content no-padding table-responsive">
-				<table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-SQL">
+				<table class="table beauty-tabletable-bordered table-striped table-hover table-heading table-datatable" id="datatable-SQL">
 					<thead>
 						<tr>
 							<th><label><input type="text" name="search_rate" value="Id" class="search_init" /></label></th>

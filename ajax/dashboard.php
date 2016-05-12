@@ -1,3 +1,4 @@
+
 <!--Start Breadcrumb-->
 <div class="row">
 	<div id="breadcrumb" class="col-xs-12">
@@ -21,7 +22,7 @@
 <!--Start Dashboard 1-->
 <div id="dashboard-header" class="row">
 	<div class="col-xs-12 col-sm-4 col-md-5">
-		<h3>Hola, USUARIO</h3>
+		<h3>Hello,<?php echo $_SESSION['ses_nombre'];?></h3>
 	</div>
 	<div class="clearfix visible-xs"></div>
 	<div class="col-xs-12 col-sm-8 col-md-7 pull-right">
@@ -79,9 +80,9 @@
 				<table id="ticker-table" class="table m-table table-bordered table-hover table-heading">
 					<thead>
 						<tr>
-							<th>Tickets</th>
-							<th>Precio</th>
-							<th>Cambio</th>
+							<th>Ticker</th>
+							<th>Price</th>
+							<th>Change</th>
 							<th>Weekly Chart</th>
 						</tr>
 					</thead>
@@ -282,7 +283,7 @@
 		<div id="dashboard-servers" class="row" style="visibility: hidden; position: absolute;">
 			<div class="col-xs-12 col-sm-6 col-md-4 ow-server">
 				<h4 class="page-header text-right"><i class="fa fa-windows"></i>#SRV-APP</h4>
-				<small>App server</small>
+				<small>Application server</small>
 				<div class="ow-settings">
 					<a href="#"><i class="fa fa-gears"></i></a>
 				</div>
